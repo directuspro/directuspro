@@ -7,7 +7,8 @@ import HeaderLeftSidebar from './header-left-sidebar';
 import PublicationLogo from './publication-logo';
 import PublicationNavLinks from './publication-nav-links';
 import PublicationSocialLinks from './publication-social-links';
-
+import config from "../static/index.js";
+const { topmate } = config;
 type Props = {
 	currentMenuId?: string | null;
 	isHome: boolean;
@@ -43,7 +44,7 @@ export const Header = (props: Props) => {
 						)}
 					>
 						<HeaderBlogSearch publication={publication} />
-						<Button as="a" href="#" type="primary" label="Sign up" />
+						<Button as="a" target="_blank" href={topmate} type="primary" label="Book Demo" />
 					</div>
 				</div>
 
