@@ -7,6 +7,10 @@ import HeaderLeftSidebar from './header-left-sidebar';
 import PublicationLogo from './publication-logo';
 import PublicationNavLinks from './publication-nav-links';
 import PublicationSocialLinks from './publication-social-links';
+import { ToggleTheme } from './toggle-theme';
+import config from "../static/index.js";
+
+const { topmate } = config;
 
 type Props = {
 	currentMenuId?: string | null;
@@ -39,11 +43,13 @@ export const Header = (props: Props) => {
 
 					<div
 						className={twJoin(
-							'flex flex-row items-center','dark:text-white',
+							'flex flex-row items-center gap-2','dark:text-white',
 						)}
 					>
 						<HeaderBlogSearch publication={publication} />
-						<Button as="a" href="#" type="primary" label="Sign up" />
+					<ToggleTheme/>
+						
+						<Button className="ml-2 md:ml-4" as="a" target="_blank" href={topmate} type="primary" label="Book Demo" />
 					</div>
 				</div>
 

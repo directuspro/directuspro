@@ -14,7 +14,8 @@ import useStickyNavScroll from './use-sticky-nav-scroll';
 import { PublicationFragment } from '../generated/graphql';
 import { Button } from './custom-button';
 import PublicationLogo from './publication-logo';
-
+import config from "../static/index.js";
+const { topmate } = config;
 type Props = {
 	publication: Pick<PublicationFragment, 'id' | 'title' | 'links' | 'url' | 'features' | 'isTeam' | 'author' | 'preferences'>;
 };
@@ -63,7 +64,7 @@ const PostPageNavbar = forwardRef<HTMLElement, Props>((props, ref) => {
 					)}
 				>
 					<HeaderBlogSearch publication={publication} />
-					<Button as="a" href="#" type="primary" label="Sign up" />
+					<Button as="a" target="_blank" href={topmate} type="primary" label="Book Demo" />
 				</div>
 			</div>
 
