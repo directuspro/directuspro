@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* Apply Sofia Sans globally */
+body {
+  font-family: var(--font-sofia), sans-serif;
+}
+
 .article-width {
   width: 800px;
 }

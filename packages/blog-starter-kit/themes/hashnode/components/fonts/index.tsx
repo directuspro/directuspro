@@ -1,26 +1,22 @@
-import { Inter, Plus_Jakarta_Sans } from 'next/font/google';
+import {Sofia_Sans } from 'next/font/google';
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
+// Configure Sofia Sans with required settings
+const sofiaSans = Sofia_Sans({
+  subsets: ['latin'], // Load only the Latin character set
+  variable: '--font-sofia', // Define a CSS variable for the font
+  display: 'swap', // Use swap for better UX
 });
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ['latin'],
-  variable: '--font-plus-jakarta-sans',
-  display: 'swap',
-});
 
 const variableConstant = 'variable';
-const fontInterVar = inter.variable.replace(variableConstant, 'Inter');
-const fontPlusJakartaSansVar = plusJakartaSans.variable.replace(variableConstant, 'Plus_Jakarta_Sans');
+const fontSofiaVar = sofiaSans.variable.replace(variableConstant, 'Sofia_Sans');
+
 
 export const GlobalFontVariables = () => (
   <style jsx global>{`
     html {
-      --font-inter: ${fontInterVar};
-      --font-plus-jakarta-sans: ${fontPlusJakartaSansVar};
+      --font-sofia: ${fontSofiaVar};
+
     }
   `}</style>
 );
