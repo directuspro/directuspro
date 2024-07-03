@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 
-/* Apply Sofia Sans globally */
+/* Apply Inter Font globally */
 body {
-  font-family: var(--font-sofia), sans-serif;
+  font-family: var(--font-inter), sans-serif;
 }
 
 .article-width {

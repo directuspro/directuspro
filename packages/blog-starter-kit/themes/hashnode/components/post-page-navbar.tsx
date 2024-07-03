@@ -10,6 +10,7 @@ import HeaderTooltip from './header-tooltip';
 import { ChevronLeftSVG } from './icons/svgs/';
 import PublicationSocialLinks from './publication-social-links';
 import useStickyNavScroll from './use-sticky-nav-scroll';
+import { ToggleTheme } from './toggle-theme';
 
 import { PublicationFragment } from '../generated/graphql';
 import { Button } from './custom-button';
@@ -60,11 +61,12 @@ const PostPageNavbar = forwardRef<HTMLElement, Props>((props, ref) => {
 
 				<div
 					className={twJoin(
-						'flex flex-row items-center','dark:text-white',
+						'flex flex-row items-center gap-2','dark:text-white',
 					)}
 				>
 					<HeaderBlogSearch publication={publication} />
-					<Button as="a" target="_blank" href={topmate} type="primary" label="Book Demo" />
+					<ToggleTheme/>
+					<Button className="ml-2 md:ml-4"  as="a" target="_blank" href={topmate} type="primary" label="Book Demo" />
 				</div>
 			</div>
 

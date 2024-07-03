@@ -1,21 +1,21 @@
-import {Sofia_Sans } from 'next/font/google';
+import {Inter } from 'next/font/google';
 
-// Configure Sofia Sans with required settings
-const sofiaSans = Sofia_Sans({
+// Configure Inter Font with required settings
+const inter = Inter({
   subsets: ['latin'], // Load only the Latin character set
-  variable: '--font-sofia', // Define a CSS variable for the font
+  variable: '--font-inter', // Define a CSS variable for the font
   display: 'swap', // Use swap for better UX
 });
 
 
 const variableConstant = 'variable';
-const fontSofiaVar = sofiaSans.variable.replace(variableConstant, 'Sofia_Sans');
+const fontInterVar = inter.variable.replace(variableConstant, 'Inter');
 
 
 export const GlobalFontVariables = () => (
   <style jsx global>{`
     html {
-      --font-sofia: ${fontSofiaVar};
+      --font-inter: ${fontInterVar};
 
     }
   `}</style>

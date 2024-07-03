@@ -3,7 +3,7 @@ const colors = require('tailwindcss/colors');
 const plugin = require('tailwindcss/plugin');
 const defaultTheme = require('tailwindcss/defaultTheme');
 
-const fontSofiaVar = 'var(--font-sofia)';
+const fontInterVar = 'var(--font-inter)';
 
 module.exports = {
 	content: ['./components/**/*.tsx', './pages/**/*.tsx', './components/*.js'],
@@ -11,8 +11,8 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: [fontSofiaVar, ...defaultTheme.fontFamily.sans],
-				heading: [fontSofiaVar, ...defaultTheme.fontFamily.sans],
+				sans: [fontInterVar, ...defaultTheme.fontFamily.sans],
+				heading: [fontInterVar, ...defaultTheme.fontFamily.sans],
 			},
 			colors: {
 				'accent-1': '#FAFAFA',
@@ -135,22 +135,22 @@ module.exports = {
 							content: '""',
 						},
 						h1: {
-							fontFamily: `${[fontSofiaVar, ...defaultTheme.fontFamily.sans]}`,
+							fontFamily: `${[fontInterVar, ...defaultTheme.fontFamily.sans]}`,
 						},
 						h2: {
-							fontFamily: `${[fontSofiaVar, ...defaultTheme.fontFamily.sans]}`,
+							fontFamily: `${[fontInterVar, ...defaultTheme.fontFamily.sans]}`,
 						},
 						h3: {
-							fontFamily: `${[fontSofiaVar, ...defaultTheme.fontFamily.sans]}`,
+							fontFamily: `${[fontInterVar, ...defaultTheme.fontFamily.sans]}`,
 						},
 						h4: {
-							fontFamily: `${[fontSofiaVar, ...defaultTheme.fontFamily.sans]}`,
+							fontFamily: `${[fontInterVar, ...defaultTheme.fontFamily.sans]}`,
 						},
 						h5: {
-							fontFamily: `${[fontSofiaVar, ...defaultTheme.fontFamily.sans]}`,
+							fontFamily: `${[fontInterVar, ...defaultTheme.fontFamily.sans]}`,
 						},
 						h6: {
-							fontFamily: `${[fontSofiaVar, ...defaultTheme.fontFamily.sans]}`,
+							fontFamily: `${[fontInterVar, ...defaultTheme.fontFamily.sans]}`,
 						},
 						td: {
 							border: '1px solid rgb(226 232 240 / 80%)',
